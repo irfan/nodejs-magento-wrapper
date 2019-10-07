@@ -1,0 +1,30 @@
+{
+  "name": "wrapper-app",
+  "version": "1.0.0",
+  "description": "Magento API Wrapper",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha",
+    "coverage": "nyc npm run test"
+  },
+  "author": "Irfan Durmus <irfandurmus@gmail.com> (http://github.com/irfan)",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "i18next": "^17.0.18",
+    "i18next-express-middleware": "^1.8.2",
+    "mocha": "^6.2.1",
+    "nyc": "^14.1.1",
+    "request": "^2.88.0"
+  },
+  "nyc": {
+    "all": true,
+    "include": [
+      "src/**/*.js"
+    ],
+    "exclude": [
+      "**/*.spec.js"
+    ]
+  }
+}
