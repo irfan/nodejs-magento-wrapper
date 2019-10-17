@@ -41,7 +41,7 @@ module.exports = {
                 password: request.body.password
             }).then(function(resp) {
                 result.success = true,
-                result.id = resp.body.id;
+                result.id = resp.id;
                 response.status(200).json(result);
             }).catch(function(resp) {
                 console.error(`An error occur by create customer request. Server message:  ${resp.error.message}`);
