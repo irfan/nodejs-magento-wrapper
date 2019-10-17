@@ -3,18 +3,11 @@ const config = require('./config');
 const app = express();
 const router = require('./router');
 const bodyParser = require('body-parser');
+const path = require('path');
+const i18n = require('i18n-express');
 
 const port = 3000;
 
-/* const i18next = require("i18next");
-const i18n = require("i18next-express-middleware");
-
-
-i18next.use(i18n.LanguageDetector).init({
-  preload: ["en", "tr", "ar"],
-  detection: config.language_options
-});
-*/
 
 module.exports = function(cluster) {
 
@@ -22,13 +15,14 @@ module.exports = function(cluster) {
     app.use(bodyParser.urlencoded({
         extended: true
     }));
-/*
-    app.use(
-        i18n.handle(i18next,{
-            removeLngFromUrl: false
-        })
-    );
-*/
+
+    app.use(i18n({
+        translationsPath: path.join(__dirname, 'lang'),
+        siteLangs: ['en', 'ar', 'tr'],
+        browserEnable: true,
+        defaultLang: 'en',
+    }));
+
     require('./router')(app);
 
     app.listen(port, function () {

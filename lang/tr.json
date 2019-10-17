@@ -1,10 +1,7 @@
-{[
-  {
-    "id": "AD",
-    "name": "Andora Turkce"
-  },
-  {
-    "id": "AE",
-    "name": "Birlesik Arap Emirlikleri"
-  }
-]}
+{
+    "United Arab Emirates": "Birlesik Arap Emirlikleri",
+    "Firstname is required": "Isim alanı zorunlu!",
+    "Lastname is required": "Soyisim alanı zorunlu!",
+    "Email is not valid": "Geçersiz e-posta!",
+    "Password is too short": "Şifre çok kısa"
+}

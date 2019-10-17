@@ -13,9 +13,5 @@ module.exports = {
     "consumer_secret": "",
     "access_token": "",
     "acccess_token_secret": "",
-    "language_options": {
-        "order": ["header" /*, "cookie", "querystring", "path", "session" */],
-        "lookupHeader": "accept-language",
-        "caches": false
-    }
+    "elasticsearch_host": ""
 }

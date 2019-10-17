@@ -2,6 +2,9 @@
 
 const config = require('./config');
 const categoryController = require('./src/categories/categoryController');
+const countryController = require('./src/countries/countryController');
+const productController = require('./src/products/productController');
+const customerController = require('./src/customers/customerController');
 
 module.exports = function(app) {
 
@@ -27,7 +30,9 @@ module.exports = function(app) {
         res.send('Welcome to the Magento Wrapper API');
     });
 
-
     app.get("/api/V1/categories", categoryController.list);
+    app.get("/api/V1/countries", countryController.list);
+    app.get("/api/V1/products", productController.list);
+    app.post("/api/V1/customers", customerController.validateCreate(), customerController.create);
 
 }
