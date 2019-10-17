@@ -3,6 +3,7 @@
 ## Installation
 - Clone the repository
 - Add your host, consumer and access keys to config.js
+- Valid magento host entry for rest API is: PROTOCOL://YOUR_DOMAIN/index.php/rest/V1/
 - Run `npm install`
 - Run `node index.js`
 
